@@ -1,7 +1,6 @@
 body{
   margin: 0;
   padding: 0;
-  display: flex;
   font-family: 'Roboto';
   width: 100%;
   height: 100vh;
@@ -74,11 +73,11 @@ aside p {
   padding: 40px 0;
 }
 
-.titulo-pricipal{
-  width: 100%;
-  top: 400px;
-  left: 300px;
+#titulo-pricipal{
+  height: 500px;
+  width: 50%;
+  top: 100px;
+  padding-left: 300px;
   background-color: #f9b234;
-  font-size: 25px; 
-  color: white;
+
 }
