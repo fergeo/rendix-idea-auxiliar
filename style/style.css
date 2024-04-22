@@ -68,25 +68,24 @@ a:hover {
     width: 80px;
 }
 
-
 .sidebar-section {
-    height: 100vh;
+    height: 100%;
     background: #66B9BF;
 }
 .sidebar-section-header{
     background-color: #ffffff;
     width: 100%;
     display: block;
-    padding: 10px 20px;
     position: fixed;
     top: 0;
     z-index: 1000;
 }
 .sidebar {
     position: fixed;
-    width: 17em;
+    width: 15em;
     height: 100vh;
-    top: 150px !important;
+    top: 60px !important;
+    background-color: #108d9e;
     overflow: hidden;
     z-index: 999;
     color: #EFF3F6;
@@ -95,6 +94,7 @@ a:hover {
     visibility: visible;
     -webkit-backface-visibility: hidden;
     margin: 0;
+    padding-top: 70px;
 }
 .sidebar header {
     background-color: #108d9e;
@@ -107,10 +107,11 @@ a:hover {
     position: fixed;
     background-color: #108d9e;
     height: 100%;
+    width: 80%;
     font-weight: 400;
     font-size: 1.2em;
     overflow: auto;
-    padding-bottom: 6em;
+    
     z-index: 9;
     overflow: hidden;
     -webkit-overflow-scrolling: touch;
@@ -202,43 +203,6 @@ a:hover {
     transition: all 0.5s ease;
 }
 
-#goto-top-button {
-    display: inline-block;
-    background-color: #e37222;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color .3s, opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 1000;
-    text-decoration: none;
-}
-#goto-top-button::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-    color: #ffffff;
-}
-#goto-top-button:hover {
-    cursor: pointer;
-    background-color: #333333;
-}
-#goto-top-button:active {
-    background-color: #555555;
-}
-#goto-top-button.show {
-    opacity: 1;
-    visibility: visible;
-}
-
 
 .home {
     position: absolute;
@@ -286,10 +250,12 @@ body{
 
 .cards-container{
     width: 50%;
-    height: 265px;
+    height: 300px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    background: #66B9BF;
+    padding-left: 5%;
 }
 .card{
     width: 214px;
@@ -401,7 +367,7 @@ body{
 }
 .icono-comunicado{
     border-radius: 10px 10px 0px 0px;
-    background: url(<path-to-image>) lightgray 50% / cover no-repeat;
+    
     width: 302px;
     height: 148px;
 }
@@ -437,11 +403,25 @@ body{
 }
 
 .container-horarios{
-    width: 50%;
+    width: 60%;
     height: 100%;
     padding-top: 20px;
     padding-bottom: 40px;    
     background: #66B9BF;
+}
+.titulo-horarios{
+    height: 60px;
+
+    color: #000;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Roboto !important;
+    font-size: 30px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.15px;
+
+    padding-top: 20px;
 }
 .horarios{
     color: #000;
@@ -458,22 +438,37 @@ body{
 .imagen-horario{
     width: 100%;
     height: 250px;
-    padding-left: 10%;
+    padding-left: 10% !important;
 }
 .img-horario{
-    width: 521px;
-    height: 250px;
+    width: 80%;
 }
 
 /*Media queries*/
 @media only screen and (max-width: 1200px) {
+
+    .home{
+        width: 80% !important;
+    }
+
+    .cards-container{
+        width: 50%;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background: #66B9BF;
+        padding-left: 5%;
+        padding-right: 2% !important;
+    }
+
     .container-comunicado{
         width: 100%;
     }
 
     .container-horarios{
-        width: 100%;
-        padding-left: 10% !important;
+        width: 80%;
+        padding-left: 5% !important;
     }
 
     .img-horario{
@@ -484,23 +479,67 @@ body{
 
 
 @media only screen and (max-width: 1130px) {
-    .sidebar{
-        left: 0px;
-        width: 30%;
-    }
 
     .cards-container{
         width: 100% !important;
         padding-top: 20px;
     }
 
-    .container-horarios{
+    .card-top{
         width: 100%;
-        padding-top: 0px;
     }
 
     .titulo-comunicado{
         padding-top: 0px;
     }
+}
 
+@media only screen and (max-width: 1130px) {
+    .img-horario{
+        width: 90%;
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .cards-container{
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 860px){
+    .card{
+        width: 28%;
+    }
+
+    .home{
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 860px){
+    .card{
+        width: 25%;
+    }
+}
+
+@media only screen and (max-width: 790px){
+    .cards-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around !important;
+
+        height: auto;
+
+        padding-top: 10px;
+        padding-left: 20% !important;
+    }
+
+    .card{
+        width: 40%;
+    }
+
+    .imgen-horario{
+        width: 70%;
+    }
 }

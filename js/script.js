@@ -4,8 +4,7 @@ id = parametros.get('id');
 id = 1
 
 peticion = new XMLHttpRequest()
-//peticion.open('GET','../api/padres/fatherInformation.json')
-peticion.open('GET','fatherInformation.json')
+peticion.open('GET','padreInformacion.json')
 
 peticion.onload = function(){
 
@@ -50,25 +49,3 @@ peticion.onload = function(){
         console.log("Error al cargar el JSON")
 }
 peticion.send()
-
-//---------------------------------------------------------------------
-//---------------------------------------------------------------------
-
-
-//botón "ir arriba" (togo-top-button)
-var btn = $('#goto-top-button');
-$(window).scroll(function() {
-    if ($(window).scrollTop() > 300) {
-        btn.addClass('show');
-    } else {
-        btn.removeClass('show');
-    }
-});
-btn.on('click', function(e) {
-    e.preventDefault();
-    $('html, body').animate({scrollTop:0}, '300');
-});
-
-//---------------------------------------------------------------------
-//---------------------------------------------------------------------
-

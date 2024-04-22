@@ -35,15 +35,31 @@ Promise.all([cargarJSON(urlJSON1),cargarJSON(urlJSON2)])
         strongElement.style.paddingLeft = "20px"
         strongElement.appendChild(strongText)
         imagenPadre.appendChild(strongElement)
+
+        perfilPadre = document.querySelector(".perfil")
+        divTexto = document.createElement('div')        
+        Texto = document.createTextNode("Nombre y apellido: " + data1.padres[0].name + " " + data1.padres[0].surname)
+        divTexto.classList.add('formatoPerfil')
+        divTexto.appendChild(Texto)
+        perfilPadre.appendChild(divTexto)
+
+        divTexto = document.createElement('div')   
+        Texto = document.createTextNode("D.N.I.: " + data1.padres[0].dni)
+        divTexto.classList.add('formatoPerfil')
+        divTexto.appendChild(Texto)
+        perfilPadre.appendChild(divTexto)
+
+        divTexto = document.createElement('div')   
+        Texto = document.createTextNode("E-mail: " + data1.padres[0].email)
+        divTexto.classList.add('formatoPerfil')
+        divTexto.appendChild(Texto)
+        perfilPadre.appendChild(divTexto)  
         
-        evaluacion = document.querySelector(".evaluaciones")
         divTexto = document.createElement('div')     
         Texto = document.createTextNode("Hijo: " + data2.hijos.name + " " + data2.hijos.surname)
         divTexto.classList.add('formatoPerfil')
         divTexto.appendChild(Texto)
-        evaluacion.appendChild(divTexto)
-
-        
+        perfilPadre.appendChild(divTexto)
         
 
 });
