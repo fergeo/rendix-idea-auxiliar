@@ -18,10 +18,11 @@
 .home{
     display: flex;
     flex-direction: column;
+    height: 1600px;
 }
 
-.container-evaluaciones{
-    height: 500px !important;
+.container-historial{
+    height: 700px !important;
     margin-top: 180px;
     margin-left: 50px;
     margin-right: 75px;
@@ -43,11 +44,9 @@
     padding-right: 50px !important;   
 }
 
-.identificacion{
-    margin-top: 10px;
-    padding-left: 60px;
-}
-
-.img-evaluaciones{
-    width: 100%;
+.img-historial{
+    padding-left: 40px;
+    padding-top: 40px;
+    width: 90%;
+    height: 600px;
 }
