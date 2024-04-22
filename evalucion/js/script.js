@@ -23,12 +23,12 @@ Promise.all([cargarJSON(urlJSON1),cargarJSON(urlJSON2)])
         //Imagen para la cabecera
         imagenPadre = document.querySelector(".padre")
         imagen = document.createElement('img')
-        
+
         imagen.src = data1.padres[0].img
         imagen.classList.add('img-padre')
         imagen.alt = data1.padres[0].altImg
         imagenPadre.appendChild(imagen)
-
+        
         strongElement = document.createElement('strong')
         strongText = document.createTextNode(data1.padres[0].name + " " + data1.padres[0].surname)
         strongElement.style.fontSize = "25px"
